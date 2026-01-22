@@ -221,6 +221,272 @@ function App() {
             </div>
           </section>
 
+          {/* Challenges Screen - Task 4 */}
+          <section className="section challenges-screen">
+            <div className="section-header">
+              <div>
+                <h3 className="section-title">Meus Desafios</h3>
+                <p className="section-subtitle">Complete desafios e ganhe pontos</p>
+              </div>
+              <div className="challenges-stats">
+                <div className="stat-chip">
+                  <span className="stat-chip-icon">🏆</span>
+                  <span className="stat-chip-value">350</span>
+                  <span className="stat-chip-label">pontos</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Daily Challenges */}
+            <div className="challenges-section">
+              <h4 className="challenges-section-title">
+                <span className="section-emoji">📅</span>
+                Desafios Diários
+                <span className="challenges-count">5 desafios</span>
+              </h4>
+
+              <div className="challenges-grid">
+                {/* Challenge 1 - Completed */}
+                <div className="challenge-item completed">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper">
+                      <span className="challenge-emoji">💧</span>
+                    </div>
+                    <span className="challenge-status completed">✓ Concluído</span>
+                  </div>
+                  <h5 className="challenge-item-title">Feche a Torneira ao Escovar os Dentes</h5>
+                  <p className="challenge-item-description">
+                    Mantenha a torneira fechada enquanto escova os dentes. Economize até 12 litros de água.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+50 pontos</span>
+                    </div>
+                    <button className="btn-challenge completed" disabled>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Concluído
+                    </button>
+                  </div>
+                </div>
+
+                {/* Challenge 2 - Pending */}
+                <div className="challenge-item pending">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper">
+                      <span className="challenge-emoji">💡</span>
+                    </div>
+                    <span className="challenge-status pending">⏳ Pendente</span>
+                  </div>
+                  <h5 className="challenge-item-title">Apague as Luzes ao Sair</h5>
+                  <p className="challenge-item-description">
+                    Desligue todas as luzes ao sair de um cômodo. Evite desperdício de energia elétrica.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+30 pontos</span>
+                    </div>
+                    <button className="btn-challenge pending">
+                      Marcar como Feito
+                    </button>
+                  </div>
+                </div>
+
+                {/* Challenge 3 - Pending */}
+                <div className="challenge-item pending">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper">
+                      <span className="challenge-emoji">♻️</span>
+                    </div>
+                    <span className="challenge-status pending">⏳ Pendente</span>
+                  </div>
+                  <h5 className="challenge-item-title">Separe o Lixo Reciclável</h5>
+                  <p className="challenge-item-description">
+                    Organize seu lixo separando plástico, papel, metal e vidro dos resíduos orgânicos.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+40 pontos</span>
+                    </div>
+                    <button className="btn-challenge pending">
+                      Marcar como Feito
+                    </button>
+                  </div>
+                </div>
+
+                {/* Challenge 4 - Completed */}
+                <div className="challenge-item completed">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper">
+                      <span className="challenge-emoji">🌱</span>
+                    </div>
+                    <span className="challenge-status completed">✓ Concluído</span>
+                  </div>
+                  <h5 className="challenge-item-title">Use Sacola Reutilizável</h5>
+                  <p className="challenge-item-description">
+                    Leve sua própria sacola ao fazer compras e evite o uso de plástico descartável.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+35 pontos</span>
+                    </div>
+                    <button className="btn-challenge completed" disabled>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Concluído
+                    </button>
+                  </div>
+                </div>
+
+                {/* Challenge 5 - Pending */}
+                <div className="challenge-item pending">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper">
+                      <span className="challenge-emoji">🚿</span>
+                    </div>
+                    <span className="challenge-status pending">⏳ Pendente</span>
+                  </div>
+                  <h5 className="challenge-item-title">Banho de 5 Minutos</h5>
+                  <p className="challenge-item-description">
+                    Reduza seu tempo no chuveiro. Um banho de 5 minutos economiza até 60 litros de água.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+50 pontos</span>
+                    </div>
+                    <button className="btn-challenge pending">
+                      Marcar como Feito
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Weekly Challenges */}
+            <div className="challenges-section">
+              <h4 className="challenges-section-title">
+                <span className="section-emoji">📆</span>
+                Desafios Semanais
+                <span className="challenges-count">3 desafios</span>
+              </h4>
+
+              <div className="challenges-grid">
+                {/* Weekly Challenge 1 - Pending */}
+                <div className="challenge-item weekly pending">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper weekly">
+                      <span className="challenge-emoji">🌍</span>
+                    </div>
+                    <span className="challenge-status pending">⏳ Pendente</span>
+                  </div>
+                  <h5 className="challenge-item-title">Use Transporte Sustentável 3x</h5>
+                  <p className="challenge-item-description">
+                    Utilize bicicleta, transporte público ou carona compartilhada pelo menos 3 vezes esta semana.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points weekly">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+100 pontos</span>
+                    </div>
+                    <button className="btn-challenge pending">
+                      Marcar como Feito
+                    </button>
+                  </div>
+                  <div className="challenge-progress">
+                    <div className="progress-bar-small">
+                      <div className="progress-fill-small" style={{width: '33%'}}></div>
+                    </div>
+                    <span className="progress-text">1 de 3 concluído</span>
+                  </div>
+                </div>
+
+                {/* Weekly Challenge 2 - Completed */}
+                <div className="challenge-item weekly completed">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper weekly">
+                      <span className="challenge-emoji">🌳</span>
+                    </div>
+                    <span className="challenge-status completed">✓ Concluído</span>
+                  </div>
+                  <h5 className="challenge-item-title">Zero Desperdício de Alimentos</h5>
+                  <p className="challenge-item-description">
+                    Planeje suas refeições e não desperdice comida durante toda a semana. Reaproveite sobras.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points weekly">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+150 pontos</span>
+                    </div>
+                    <button className="btn-challenge completed" disabled>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Concluído
+                    </button>
+                  </div>
+                  <div className="challenge-progress">
+                    <div className="progress-bar-small">
+                      <div className="progress-fill-small completed" style={{width: '100%'}}></div>
+                    </div>
+                    <span className="progress-text">7 de 7 dias completos</span>
+                  </div>
+                </div>
+
+                {/* Weekly Challenge 3 - Pending */}
+                <div className="challenge-item weekly pending">
+                  <div className="challenge-item-header">
+                    <div className="challenge-icon-wrapper weekly">
+                      <span className="challenge-emoji">🔋</span>
+                    </div>
+                    <span className="challenge-status pending">⏳ Pendente</span>
+                  </div>
+                  <h5 className="challenge-item-title">Economia de Energia Avançada</h5>
+                  <p className="challenge-item-description">
+                    Desligue aparelhos da tomada quando não estiver usando. Reduza 20% do consumo de energia.
+                  </p>
+                  <div className="challenge-item-footer">
+                    <div className="challenge-points weekly">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" fill="currentColor"/>
+                      </svg>
+                      <span>+120 pontos</span>
+                    </div>
+                    <button className="btn-challenge pending">
+                      Marcar como Feito
+                    </button>
+                  </div>
+                  <div className="challenge-progress">
+                    <div className="progress-bar-small">
+                      <div className="progress-fill-small" style={{width: '60%'}}></div>
+                    </div>
+                    <span className="progress-text">12% de economia alcançada</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Sustainable Tips Showcase - Task 3 */}
           <section className="section tips-showcase" id="dicas">
             <div className="section-header">

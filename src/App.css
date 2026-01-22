@@ -580,25 +580,333 @@
   transition: transform var(--transition-base);
 }
 
-.category-card:hover .category-icon {
-  transform: scale(1.1);
-}
+  .category-card:hover .category-icon {
+    transform: scale(1.1);
+  }
 
-.category-title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
+  .category-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
 
-.category-count {
-  font-size: var(--font-size-sm);
-  color: var(--text-secondary);
-  font-weight: var(--font-weight-medium);
-}
+  .category-count {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+  }
 
-/* ========================================
-   TIPS 
+  /* ========================================
+     CHALLENGES SCREEN - Task 4
+     ======================================== */
+
+  .challenges-screen {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+  }
+
+  .challenges-stats {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .stat-chip {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--gradient-accent);
+    color: white;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .stat-chip-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .stat-chip-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .stat-chip-label {
+    font-size: var(--font-size-sm);
+    opacity: 0.95;
+  }
+
+  .challenges-section {
+    margin-bottom: var(--space-10);
+  }
+
+  .challenges-section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .section-emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .challenges-count {
+    margin-left: auto;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    padding: var(--space-1) var(--space-3);
+    background: var(--eco-green-100);
+    color: var(--eco-green-700);
+    border-radius: var(--radius-full);
+  }
+
+  /* Challenges Grid */
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-6);
+  }
+
+  /* Challenge Item */
+  .challenge-item {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 2px solid var(--border-light);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .challenge-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--eco-green-500);
+    transform: scaleY(0);
+    transition: transform var(--transition-base);
+  }
+
+  .challenge-item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .challenge-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+  }
+
+  .challenge-item.completed {
+    background: linear-gradient(135deg, var(--eco-green-50) 0%, var(--bg-primary) 100%);
+    border-color: var(--eco-green-300);
+    opacity: 0.9;
+  }
+
+  .challenge-item.weekly {
+    border-color: var(--eco-blue-300);
+  }
+
+  .challenge-item.weekly::before {
+    background: var(--eco-blue-500);
+  }
+
+  .challenge-item.weekly.completed {
+    background: linear-gradient(135deg, var(--eco-blue-50) 0%, var(--bg-primary) 100%);
+  }
+
+  .challenge-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .challenge-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: var(--eco-green-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .challenge-icon-wrapper.weekly {
+    background: var(--eco-blue-100);
+  }
+
+  .challenge-emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  /* Status Badge */
+  .challenge-status {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .challenge-status.pending {
+    background: var(--eco-amber-100);
+    color: var(--eco-amber-700);
+  }
+
+  .challenge-status.completed {
+    background: var(--eco-green-100);
+    color: var(--eco-green-700);
+  }
+
+  .challenge-item-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: var(--line-height-tight);
+  }
+
+  .challenge-item-description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .challenge-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .challenge-points {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--eco-amber-600);
+  }
+
+  .challenge-points.weekly {
+    color: var(--eco-blue-600);
+  }
+
+  .challenge-points svg {
+    flex-shrink: 0;
+  }
+
+  /* Challenge Button */
+  .btn-challenge {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .btn-challenge.pending {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-challenge.pending:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-challenge.completed {
+    background: var(--eco-green-100);
+    color: var(--eco-green-700);
+    cursor: not-allowed;
+  }
+
+  /* Challenge Progress (for weekly challenges) */
+  .challenge-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .progress-bar-small {
+    height: 6px;
+    background: var(--eco-slate-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .progress-fill-small {
+    height: 100%;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .progress-fill-small.completed {
+    background: var(--gradient-primary);
+  }
+
+  .progress-text {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+  }
+
+  @media (max-width: 768px) {
+    .challenges-screen {
+      padding: var(--space-6);
+    }
+
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .challenge-item-footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-challenge {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* ========================================
+     TIPS 
    ======================================== */
 
 .tips-showcase {
