@@ -221,30 +221,199 @@ function App() {
             </div>
           </section>
 
-          {/* Tips Section */}
-          <section className="section" id="dicas">
+          {/* Sustainable Tips Showcase - Task 3 */}
+          <section className="section tips-showcase" id="dicas">
             <div className="section-header">
               <div>
-                <h3 className="section-title">Dicas Rápidas</h3>
-                <p className="section-subtitle">Pequenas mudanças, grande impacto</p>
+                <h3 className="section-title">Dicas Sustentáveis</h3>
+                <p className="section-subtitle">Aprenda práticas sustentáveis para o dia a dia</p>
               </div>
             </div>
             
-            <div className="tips-grid">
-              <div className="tip-card">
-                <div className="tip-icon">💡</div>
-                <h5 className="tip-title">Lâmpadas LED</h5>
-                <p className="tip-text">Economize até 80% de energia substituindo lâmpadas comuns por LED.</p>
+            {/* Category Filters */}
+            <div className="tips-filters">
+              <button className="filter-btn active" data-category="all">
+                🌍 Todas
+              </button>
+              <button className="filter-btn" data-category="water">
+                💧 Água
+              </button>
+              <button className="filter-btn" data-category="energy">
+                ⚡ Energia
+              </button>
+              <button className="filter-btn" data-category="waste">
+                ♻️ Desperdício
+              </button>
+            </div>
+
+            {/* Water Tips */}
+            <div className="tips-category" data-category="water">
+              <h4 className="category-header">
+                <span className="category-icon-header">💧</span>
+                Dicas para Economia de Água
+              </h4>
+              <div className="tips-grid-enhanced">
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">💧</div>
+                    <span className="tip-category-label">Água</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Feche a Torneira</h5>
+                  <p className="tip-text-enhanced">
+                    Ao escovar os dentes ou ensaboar a louça, mantenha a torneira fechada. Você pode economizar até 80 litros de água por dia.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🚿</div>
+                    <span className="tip-category-label">Água</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Banhos Curtos</h5>
+                  <p className="tip-text-enhanced">
+                    Reduza seu tempo de banho para 5 minutos. Um chuveiro comum gasta de 6 a 10 litros por minuto.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🪣</div>
+                    <span className="tip-category-label">Água</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Reutilize Água</h5>
+                  <p className="tip-text-enhanced">
+                    Use a água da máquina de lavar ou do enxágue para limpar o quintal e regar plantas. Água de cozimento (sem sal) também pode ser usada.
+                  </p>
+                  <div className="tip-impact">Impacto: Médio ⭐</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🔧</div>
+                    <span className="tip-category-label">Água</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Conserte Vazamentos</h5>
+                  <p className="tip-text-enhanced">
+                    Uma torneira pingando desperdiça até 46 litros de água por dia. Verifique e conserte vazamentos regularmente.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
               </div>
-              <div className="tip-card">
-                <div className="tip-icon">🌿</div>
-                <h5 className="tip-title">Compostagem</h5>
-                <p className="tip-text">Transforme restos orgânicos em adubo rico para suas plantas.</p>
+            </div>
+
+            {/* Energy Tips */}
+            <div className="tips-category" data-category="energy">
+              <h4 className="category-header">
+                <span className="category-icon-header">⚡</span>
+                Dicas para Economia de Energia
+              </h4>
+              <div className="tips-grid-enhanced">
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">💡</div>
+                    <span className="tip-category-label energy">Energia</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Lâmpadas LED</h5>
+                  <p className="tip-text-enhanced">
+                    Substitua lâmpadas incandescentes por LED. Elas duram até 25 vezes mais e consomem até 80% menos energia.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🔌</div>
+                    <span className="tip-category-label energy">Energia</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Desligue da Tomada</h5>
+                  <p className="tip-text-enhanced">
+                    Aparelhos em stand-by consomem energia. Desligue completamente ou use réguas com interruptor para economizar até 12% na conta.
+                  </p>
+                  <div className="tip-impact">Impacto: Médio ⭐</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">❄️</div>
+                    <span className="tip-category-label energy">Energia</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Geladeira Eficiente</h5>
+                  <p className="tip-text-enhanced">
+                    Mantenha a geladeira longe do fogão, regule a temperatura corretamente (3°C a 5°C) e evite abrir a porta desnecessariamente.
+                  </p>
+                  <div className="tip-impact">Impacto: Médio ⭐</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">☀️</div>
+                    <span className="tip-category-label energy">Energia</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Luz Natural</h5>
+                  <p className="tip-text-enhanced">
+                    Aproveite ao máximo a luz natural durante o dia. Abra cortinas e persianas para reduzir o uso de luz artificial.
+                  </p>
+                  <div className="tip-impact">Impacto: Médio ⭐</div>
+                </div>
               </div>
-              <div className="tip-card">
-                <div className="tip-icon">🛍️</div>
-                <h5 className="tip-title">Sacolas Reutilizáveis</h5>
-                <p className="tip-text">Uma sacola de pano substitui centenas de sacolas plásticas.</p>
+            </div>
+
+            {/* Waste Tips */}
+            <div className="tips-category" data-category="waste">
+              <h4 className="category-header">
+                <span className="category-icon-header">♻️</span>
+                Dicas para Redução de Desperdício
+              </h4>
+              <div className="tips-grid-enhanced">
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">♻️</div>
+                    <span className="tip-category-label waste">Desperdício</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Recicle Corretamente</h5>
+                  <p className="tip-text-enhanced">
+                    Separe o lixo em orgânico e reciclável. Lave embalagens antes de descartar e conheça os pontos de coleta da sua cidade.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">�</div>
+                    <span className="tip-category-label waste">Desperdício</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Compostagem</h5>
+                  <p className="tip-text-enhanced">
+                    Transforme restos orgânicos em adubo rico. Uma composteira caseira reduz até 50% do lixo doméstico.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🛍️</div>
+                    <span className="tip-category-label waste">Desperdício</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Sacolas Reutilizáveis</h5>
+                  <p className="tip-text-enhanced">
+                    Leve sua própria sacola ao fazer compras. Uma sacola de pano substitui centenas de sacolas plásticas ao longo do ano.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
+
+                <div className="tip-card-enhanced">
+                  <div className="tip-card-header">
+                    <div className="tip-icon-enhanced">🍱</div>
+                    <span className="tip-category-label waste">Desperdício</span>
+                  </div>
+                  <h5 className="tip-title-enhanced">Evite Descartáveis</h5>
+                  <p className="tip-text-enhanced">
+                    Use garrafas reutilizáveis, canudos de metal/vidro e marmitas. Descartáveis demoram centenas de anos para se decompor.
+                  </p>
+                  <div className="tip-impact">Impacto: Alto 🌟</div>
+                </div>
               </div>
             </div>
           </section>

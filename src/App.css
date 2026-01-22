@@ -598,9 +598,176 @@
 }
 
 /* ========================================
-   TIPS
+   TIPS 
    ======================================== */
 
+.tips-showcase {
+  background: var(--bg-primary);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+/* Category Filters */
+.tips-filters {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.filter-btn:hover {
+  background: var(--eco-green-50);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* Category Sections */
+.tips-category {
+  margin-bottom: var(--space-12);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.category-icon-header {
+  font-size: 2rem;
+}
+
+/* Enhanced Tips Grid */
+.tips-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Enhanced Tip Cards */
+.tip-card-enhanced {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--eco-green-100) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.tip-card-enhanced:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.tip-card-enhanced:hover::before {
+  opacity: 1;
+}
+
+.tip-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.tip-icon-enhanced {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.tip-category-label {
+  padding: var(--space-1) var(--space-3);
+  background: var(--eco-green-100);
+  color: var(--eco-green-700);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+}
+
+.tip-category-label.energy {
+  background: var(--eco-blue-100);
+  color: var(--eco-blue-700);
+}
+
+.tip-category-label.waste {
+  background: var(--eco-amber-100);
+  color: var(--eco-amber-700);
+}
+
+.tip-title-enhanced {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.tip-text-enhanced {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.tip-impact {
+  padding: var(--space-2) var(--space-3);
+  background: linear-gradient(135deg, var(--eco-green-50) 0%, var(--eco-blue-50) 100%);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--eco-green-200);
+}
+
+/* Old tips styles - keeping for compatibility */
 .tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -639,6 +806,25 @@
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
   color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .tips-showcase {
+    padding: var(--space-6);
+  }
+
+  .tips-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-filters {
+    gap: var(--space-2);
+  }
+
+  .filter-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
 }
 
 /* ========================================
