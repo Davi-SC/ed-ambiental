@@ -278,6 +278,145 @@
 }
 
 /* ========================================
+   DASHBOARD GREETING
+   ======================================== */
+
+.dashboard-greeting {
+  margin-bottom: var(--space-12);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.greeting-content {
+  background: linear-gradient(135deg, var(--eco-green-500) 0%, var(--eco-blue-500) 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  color: white;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.greeting-content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.greeting-header {
+  margin-bottom: var(--space-6);
+}
+
+.greeting-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+  margin-bottom: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.greeting-message {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 1;
+}
+
+/* Progress Bar */
+.daily-progress {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.progress-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.progress-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+}
+
+.progress-bar {
+  height: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.progress-subtitle {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .greeting-content {
+    padding: var(--space-6);
+  }
+  
+  .greeting-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .greeting-message {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* ========================================
    CHALLENGE CARDS
    ======================================== */
 
@@ -356,6 +495,55 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-secondary);
+}
+
+/* Challenge Grid for Small Cards */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.challenge-card-small {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.challenge-card-small:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.challenge-icon-small {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.challenge-title-small {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.challenge-desc-small {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.btn-small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
 }
 
 /* ========================================

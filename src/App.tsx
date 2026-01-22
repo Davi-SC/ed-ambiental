@@ -108,6 +108,27 @@ function App() {
       {/* Main Content Area */}
       <main className="main-content">
         <div className="container">
+          {/* Dashboard Greeting */}
+          <section className="dashboard-greeting">
+            <div className="greeting-content">
+              <div className="greeting-header">
+                <h2 className="greeting-title">Olá! 👋</h2>
+                <p className="greeting-message">Hoje você já ajudou o planeta!</p>
+              </div>
+              
+              <div className="daily-progress">
+                <div className="progress-header">
+                  <span className="progress-label">Progresso do dia</span>
+                  <span className="progress-value">60%</span>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{width: '60%'}}></div>
+                </div>
+                <p className="progress-subtitle">Continue assim! Mais 2 desafios para completar seu dia.</p>
+              </div>
+            </div>
+          </section>
+
           {/* Daily Challenge Section */}
           <section className="section" id="desafios">
             <div className="section-header">
@@ -127,9 +148,9 @@ function App() {
               <div className="challenge-badge">Desafio Diário</div>
               <div className="challenge-content">
                 <div className="challenge-icon">💧</div>
-                <h4 className="challenge-title">Reduza o Tempo no Chuveiro</h4>
+                <h4 className="challenge-title">Feche a Torneira ao Escovar os Dentes</h4>
                 <p className="challenge-description">
-                  Tome um banho de no máximo 5 minutos hoje. Uma ducha de 15 minutos gasta até 135 litros de água!
+                  Deixar a torneira aberta durante 3 minutos desperdiça até 12 litros de água. Feche enquanto escova!
                 </p>
                 <div className="challenge-meta">
                   <div className="challenge-points">
@@ -146,7 +167,23 @@ function App() {
                     <span>Expira em 18h</span>
                   </div>
                 </div>
-                <button className="btn btn-primary btn-full">Aceitar Desafio</button>
+                <button className="btn btn-primary btn-full">Concluir Desafio</button>
+              </div>
+            </div>
+            
+            {/* Additional Challenge Examples */}
+            <div className="challenge-grid">
+              <div className="challenge-card-small">
+                <div className="challenge-icon-small">💡</div>
+                <h5 className="challenge-title-small">Apague as Luzes ao Sair</h5>
+                <p className="challenge-desc-small">Economize energia desligando as luzes</p>
+                <button className="btn btn-secondary btn-small">Ver Desafio</button>
+              </div>
+              <div className="challenge-card-small">
+                <div className="challenge-icon-small">🚰</div>
+                <h5 className="challenge-title-small">Banho de 5 Minutos</h5>
+                <p className="challenge-desc-small">Reduza seu tempo no chuveiro</p>
+                <button className="btn btn-secondary btn-small">Ver Desafio</button>
               </div>
             </div>
           </section>
